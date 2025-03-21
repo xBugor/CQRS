@@ -44,3 +44,28 @@ Geriye veri döndürmez.
 
 *İş sistemin basit ve değişmediği yerlerde kullanılması önerilmez.*
 
+
+ 
+CQRS Bileşenleri
+
+|  Bileşen | Görevi   |  
+| --|:-------:|
+| Command | Yazma işlemlerini temsil eder.  | 
+| Command Handler| Command'ı işleyerek veriyi değiştirir.| 
+| Query | Okuma işlemlerini temsil eder.|
+| Query Handler	 | Query'yi işleyerek veriyi döndürür.| 
+| Controller		 | Command ve Query’leri ilgili handler’lara yönlendirir. | 
+
+CQRS Kullanımı
+
+Command oluştur → Yazma işlemlerini tanımlar.
+
+Command Handler oluştur → Komutu işler ve veriyi değiştirir.
+
+Query oluştur → Okuma işlemlerini tanımlar.
+
+Query Handler oluştur → Veriyi sorgular ve döndürür.
+
+Controller oluştur → Gelen istekleri uygun Command veya Query’ye yönlendirir.
+
+Route ekle → API veya web arayüzü üzerinden istekleri yönlendir.
